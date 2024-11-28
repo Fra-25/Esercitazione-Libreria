@@ -1,5 +1,11 @@
 from Libro import Libreria
 from Libro import Prestiti
+from Libro import Primo
+from Libro import Secondo
+from Libro import Terzo
+from Libro import Quarto
+from Libro import Quinto
+from Libro import Sesto
 while(True):
     print("")
     print("MAIN MENU")
@@ -12,40 +18,17 @@ while(True):
     print("Esci:7")
     x = int(input())
     if(x==1):
-        print("Che libro vuoi aggiungere alla Libreria?")
-        Libro1 = input()
-        Libreria.append(Libro1) #Aggiungi Libro
-        print(Libro1,"è stato aggiunto alla Libreria")
+        Primo()
     elif(x==2):
-        print("Che libro è stato preso in prestito?")
-        Libro2 = input()
-        if(Libro2 in Libreria):
-            Prestiti.append(Libro2) #Prestito Libro
-            Libreria.remove(Libro2)
-            print(Libro2, "è stato prestato")
-        else:
-            print("Questo libro non è disponibile")
+        Secondo()
     elif(x==3):
-        print("Che libro è stato riportato?")
-        Libro3 = input()
-        Prestiti.remove(Libro3)
-        Libreria.append(Libro3)
-        print(Libro3 , "è stato restituito") #Riporta Libro
+        Terzo()
     elif(x==4):
-        print("Di quale libro vuoi verificare la disponibilità?")
-        Libro4 = input()
-        if(Libro4 in Libreria):
-            print("Questo libro è disponibile")
-        elif(Libro4 in Prestiti):
-            print("Questo libro è stato preso in prestito")
-        else:
-            print("Questo libro non è disponibile") #Disponibilità Libro
+        Quarto()
     elif(x==5):
-        print("Libreria")
-        print(Libreria) #Libri disponibili nella Libreria
+        Quinto()
     elif(x==6):
-        print("Prestiti")
-        print(Prestiti) #Libri dati in prestito
+        Sesto()
     elif(x==7):
         break
     else:
